@@ -11,7 +11,10 @@ package com.novatronic.ch02;
  */
 public class Execution {
     public static void main(String[] args) {
-        Chick c = new Chick();
+        //Chick c = new Chick();
         ClaseX x = new ClaseX();
+        System.out.println("1.var:" + x.nombre);
+        x.nombre = "JuanV";
+        System.out.println("2.var:" + x.nombre);
     }
 }

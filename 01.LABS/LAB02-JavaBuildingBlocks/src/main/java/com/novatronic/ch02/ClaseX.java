@@ -10,5 +10,9 @@ package com.novatronic.ch02;
  * @author Omar
  */
 public class ClaseX {
-    String nombre;
+    String nombre = "Chunga";
+    
+    public void metodo(){
+        String x = "a";
+    }
 }
