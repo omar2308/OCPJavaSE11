@@ -15,4 +15,8 @@ public class ClaseX {
     public void metodo(){
         String x = "a";
     }
+    
+    {
+        
+    }
 }

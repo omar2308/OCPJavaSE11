@@ -16,5 +16,12 @@ public class Execution {
         System.out.println("1.var:" + x.nombre);
         x.nombre = "JuanV";
         System.out.println("2.var:" + x.nombre);
+        
+        System.out.println("-----------------");
+        
+        Bird bird1 = new Bird();
+        Bird bird2 = new Bird();
+        Bird bird3 = new Bird();
+                
     }
 }
