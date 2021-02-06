@@ -22,6 +22,10 @@ public class Execution {
         Bird bird1 = new Bird();
         Bird bird2 = new Bird();
         Bird bird3 = new Bird();
+        
+        System.out.println("-----------------");
+        
+        Chick ch = new Chick();
                 
     }
 }
