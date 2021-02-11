@@ -18,5 +18,8 @@ public class Scope {
         one = two;
         String three = one;
         one = null;
+        
+        long d = 7L;
+        float c = 3.0F;
     }
 }
