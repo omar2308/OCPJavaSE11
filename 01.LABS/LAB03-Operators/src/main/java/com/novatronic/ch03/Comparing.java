@@ -14,5 +14,34 @@ public class Comparing {
         //boolean monkey = true == 3;
         
         System.out.print(null == null);
+        Pirata a = new Pirata("Juan");
+        Pirata b = new Pirata("Juan");
+        System.out.println("a==b:" + (a==b));
+        
+        Pirata c = new Pirata("Jose");
+        System.out.println("a==c:" + (a==c));
+        
+        c = b;
+        System.out.println("c==b:" + (c==b));
+        a = b;
+        System.out.println("a==b:" + (a==b));
+        
+        a = null;
+        System.out.println("a==null:" + (a==null));
+        System.out.println("-------------");
+        
+        int x = 5;
+        float y = 5.0f;
+        System.out.println("x == y?" + (x == y));
     }
 }
+
+class Pirata{
+    private String name;
+
+    public Pirata(String name) {
+        this.name = name;
+    }
+    
+}
+
