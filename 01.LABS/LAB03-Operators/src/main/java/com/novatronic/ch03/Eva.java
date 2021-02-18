@@ -12,18 +12,30 @@ package com.novatronic.ch03;
 public class Eva {
 
     public static void main(String[] args) {
-        int a = 2, b = 4, c = 2;
-        System.out.println(a > 2 ? --c : b++);
-        System.out.println("I- a:" + a + ",b:" + b + ",c:" + c);
-        System.out.println(b = (a != c ? a : b++));
-        System.out.println("II- a:" + a + ",b:" + b + ",c:" + c);
-        System.out.println(a > b ? b < c ? b : 2 : 1);
-        System.out.println("III- a:" + a + ",b:" + b + ",c:" + c);
+        int pig = (short) 4;
+        //int x = pig++;
+        //System.out.println("x:" + x);
+        pig = pig++;
+        //pig++;
+        System.out.println("pig:" + pig);
+        int y = 1;
+        y = y + pig;
+        System.out.println("y:" + y);
+        long goat = (int) 2;
+        //goat = (long)(goat - 1.0); implicatamente hay un cast a long
+        goat -= 1.0;
+        System.out.print(pig + " - " + goat);
+    }
+    
+    public void pregunta10(){
+        int b = 5;
+        int c = (int)2.0 + 1;
+        
+        int  x = ++c + b;
+        int  y = (int)c + b;
+        
+        int a = (2 + 5) + (int) (2.0 + 1);
 
-//        int note = 1 * 2 + (long) 3;
-//        short melody = (byte) (double) (note *= 2);
-//        double song = melody;
-//        float symphony = (float) ((song == 1_000f) ? song * 2L : song);
 
     }
 }
