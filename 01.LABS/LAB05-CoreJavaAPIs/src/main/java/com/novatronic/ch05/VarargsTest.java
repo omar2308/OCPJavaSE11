@@ -11,10 +11,13 @@ package com.novatronic.ch05;
  */
 public class VarargsTest {
     public static void main(String[] args) {
+        String[] params = {"a", "b", "c"};
         metodo("a", "b", "c", "d");
+        metodo(params);
     }
     
     public static void metodo(String... cadenas){
+        System.out.println("----------");
         for (int i = 0; i < cadenas.length; i++) {
             System.out.println(cadenas[i]);
         }

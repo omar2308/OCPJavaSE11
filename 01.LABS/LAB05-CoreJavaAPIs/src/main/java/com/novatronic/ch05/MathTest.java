@@ -9,14 +9,15 @@ package com.novatronic.ch05;
  *
  * @author Omar
  */
-public class Wrapper {
+public class MathTest {
     public static void main(String[] args) {
-        Integer n = Integer.valueOf(null);
-        Integer m = 2;
-        m = null;
-        int x = m.intValue();
+        //int num = Math.round(2.3);
+        int num = Math.round(2.3f);
         
-        int y = m;
+        double sal = Math.random();
+        System.out.println(sal);
         
+        int aleatorio = (int)(10*Math.random());
+        System.out.println(aleatorio);
     }
 }

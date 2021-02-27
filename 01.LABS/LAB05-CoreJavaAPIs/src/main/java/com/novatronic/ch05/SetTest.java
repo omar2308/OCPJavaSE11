@@ -5,18 +5,16 @@
  */
 package com.novatronic.ch05;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Omar
  */
-public class Wrapper {
+public class SetTest {
     public static void main(String[] args) {
-        Integer n = Integer.valueOf(null);
-        Integer m = 2;
-        m = null;
-        int x = m.intValue();
-        
-        int y = m;
+        Set<Integer> set = new HashSet<>();
         
     }
 }

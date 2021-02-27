@@ -6,6 +6,7 @@
 package com.novatronic.ch05;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -40,5 +41,9 @@ public class ArraysTest {
         System.out.println("a:" + (0 + 'a') + ", 1:" + (0 + '1') + ",A:" 
                 + (0 + 'A') + ", ñ:" + (0+ 'ñ'));
         System.out.println(Arrays.compare(new String[] {"1a", "bb"}, new String[] {"aa","bb"}));
+        
+        System.out.println("---------------");
+        List<Integer> numeros = Arrays.asList(1,2,3);
+        System.out.println(numeros);
     }
 }
