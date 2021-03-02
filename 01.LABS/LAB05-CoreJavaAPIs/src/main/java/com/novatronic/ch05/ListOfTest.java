@@ -22,7 +22,8 @@ public class ListOfTest {
         print(arr);
         System.out.println(holas);
         
-        
+        String[] arr2 = {"hola", null};
+        List<String> holas2 = List.of(arr2); // NullPointer     
     }
     
     private static void print(Object[] arr){
