@@ -42,6 +42,7 @@ public class TraditionalSearch {
    }
 }
 
+//@FunctionalInterface
 interface CheckTrait {
   boolean probar(Animal a);
   //int contar();  //No puedo agreagar otro metodo, porque deja de ser una
