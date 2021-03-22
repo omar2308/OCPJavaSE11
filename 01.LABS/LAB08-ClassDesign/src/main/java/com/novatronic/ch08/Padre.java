@@ -3,19 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.novatronic.ch07.pond.duck.otro;
-
-import com.novatronic.ch07.pond.duck.FatherDuck;
-import java.util.Arrays;
+package com.novatronic.ch08;
 
 /**
  *
  * @author Omar
  */
-public class OtherPkg {
+public class Padre extends Object{
     public static void main(String[] args) {
-        FatherDuck duck = new FatherDuck();
-        //duck.name = "";
         
     }
 }
