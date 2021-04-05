@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.novatronic.ch09.eva;
+package com.novatronic.ch09.preg;
 
 /**
  *

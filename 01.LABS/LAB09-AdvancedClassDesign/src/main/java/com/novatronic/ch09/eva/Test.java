@@ -9,12 +9,8 @@ package com.novatronic.ch09.eva;
  *
  * @author Omar
  */
-public interface CanFly {
-   int fly();
-   String fly(int distance);
+public class Test {
+    private final void metodo() {
+        
+    }
 }
-interface HasWings {
-   abstract Integer fly();
-   public abstract Object getWingSpan();
-}
-//abstract class Falcon implements CanFly, HasWings {}

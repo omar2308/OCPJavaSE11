@@ -24,3 +24,9 @@ public class Zoo {
         return t;
     }
 }
+
+class Avion{
+    public void metodo(){
+        //Ticket t = new Ticket();
+    }
+}
