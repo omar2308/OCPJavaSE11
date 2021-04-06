@@ -5,6 +5,7 @@
  */
 package com.novatronic.ch10;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -13,6 +14,9 @@ import java.io.IOException;
  */
 public class CheckedTest {
 
+    public CheckedTest() throws IOException{
+        
+    }
     void fall(int distance) {
         try {
             if (distance > 10) {
@@ -23,9 +27,18 @@ public class CheckedTest {
         }
     }
 
-    void fall2(int distance) throws IOException {
+    void fall2(int distance) throws ArithmeticException {
         if (distance > 10) {
-            throw new IOException();
+            Object e = new IOException();
+            //throw e; //No compila
+            //throw (FileNotFoundException)e;
+            throw new NullPointerException();
+            //throw new IOException();
         }
+    }
+    
+    public static void main(String[] args) throws IOException {
+        CheckedTest ch = new CheckedTest();
+        int[] nums = {3,2};
     }
 }

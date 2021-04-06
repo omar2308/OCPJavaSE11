@@ -14,8 +14,10 @@ import java.io.IOException;
  * @author Omar
  */
 public class ResourcesTest {
-
-    public void readFile1(String file) {
+    public static void main(String[] args) throws IOException {
+        readFile2("xxx");
+    }
+    public static void readFile1(String file) {
         FileInputStream is = null;
         try {
             is = new FileInputStream("myfile.txt");
@@ -33,7 +35,7 @@ public class ResourcesTest {
         }
     }
 
-    public void readFile2(String file) throws IOException {
+    public static void readFile2(String file) throws IOException {
         try ( FileInputStream is = new FileInputStream("myfile.txt")) {
             // Read file data
         }

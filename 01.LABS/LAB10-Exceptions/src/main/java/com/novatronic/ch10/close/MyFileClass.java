@@ -21,12 +21,12 @@ public class MyFileClass implements AutoCloseable {
     }
 
     public static void main(String... xyz) {
-        try ( MyFileClass a1 = new MyFileClass(1);  MyFileClass a2 = new MyFileClass(2)) {
+        try ( MyFileClass a1 = new MyFileClass(1);  MyFileClass a2 = new MyFileClass(2);) {
             throw new RuntimeException();
         } catch (Exception e) {
-            System.out.println("ex");
+            System.out.println("en catch");
         } finally {
-            System.out.println("finally");
+            System.out.println("en finally");
         }
     }
 }

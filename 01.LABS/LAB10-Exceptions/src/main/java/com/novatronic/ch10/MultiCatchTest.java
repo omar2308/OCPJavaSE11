@@ -24,6 +24,9 @@ public class MultiCatchTest {
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
 
             System.out.println("Missing or invalid input");
+        } catch (IllegalArgumentException e) {
+
+            System.out.println("Missing or invalid input");
         }
     }
     

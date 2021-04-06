@@ -15,7 +15,7 @@ public class TryCatchTest {
         try {
             fall();
             System.out.println("never get here");
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             getUp();
         }
         seeAnimals();
