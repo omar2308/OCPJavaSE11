@@ -31,5 +31,6 @@ public class OptionalTest {
         System.out.println(combined.apply(3));   // 8
         
         
+        
     }
 }

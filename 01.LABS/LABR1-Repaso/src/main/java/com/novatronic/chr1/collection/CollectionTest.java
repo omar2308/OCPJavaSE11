@@ -24,7 +24,7 @@ public class CollectionTest {
         Stream<Algo> algos = Stream.of(new Algo("a"), new Algo("b"), new Algo("d"));
         Stream<Algo> algosn = algos.sorted();
         //algosn.forEach(a -> System.out.println(a)); //produce excepcion al usar.
-        algosn.mapToDouble(x -> 2.0).;
+        algosn.mapToDouble(x -> 2.0);
     }
 }
 
