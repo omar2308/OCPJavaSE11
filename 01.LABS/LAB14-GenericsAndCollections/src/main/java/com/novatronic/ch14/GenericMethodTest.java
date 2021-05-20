@@ -39,6 +39,8 @@ class Test<T>{
     public <T> T tricky(T t){
         System.out.println(dato instanceof Integer);
         System.out.println(dato instanceof String);
+        System.out.println(t instanceof Integer);
+        System.out.println(t instanceof String);
         return t;
     }
 }

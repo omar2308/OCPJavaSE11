@@ -33,5 +33,6 @@ public class UnboundedWildcardTest {
             System.out.println(object);
         }
         //lista.add("");
+        //lista.clear(); Esto si es alido
     }
 }
