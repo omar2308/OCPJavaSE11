@@ -33,6 +33,11 @@ public class ConsumerTest {
         BiConsumer<String, Integer> bc2 = (k,v) -> map.put(k,v);
         map.put("", 3);
         ///map = new HashMap<>();    // Tener cuidado con el efectivam... final
+        System.out.println("---------------");
+        Consumer<String> co1 = s -> { System.out.println("s:" + s);};
+        Consumer<String> co2 = System.out::println;
+        
+        co1.andThen(co2).accept("XX");
     }
     
     public static String print(String algo){

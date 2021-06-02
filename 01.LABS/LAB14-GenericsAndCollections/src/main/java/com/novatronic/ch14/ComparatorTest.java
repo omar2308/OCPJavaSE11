@@ -5,8 +5,11 @@
  */
 package com.novatronic.ch14;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 /**
  *
@@ -14,13 +17,39 @@ import java.util.Comparator;
  */
 public class ComparatorTest {
     public static void main(String[] args) {
-        Comparator<Person> comp =  Comparator
+        Comparator<Person> comp1 =  Comparator
                 .comparing(Person::getNombre)
-                .thenComparingInt(Person::getEdad).reversed();
+                .thenComparingInt(Person::getEdad);
         
-        Comparator comp1 =  Comparator.naturalOrder();
+        Comparator<Person> comp2 =  Comparator
+                .comparing(Person::getNombre)
+                .thenComparing(
+                        Comparator.comparing(Person::getEdad)
+                                .reversed());
+        
+        Comparator comp3 =  Comparator.naturalOrder();
+        
         String[] str = {"A", "B"};
+        List<Person> lista = Arrays.asList(
+            new Person(20, "Jose"), 
+                new Person(20, "Andre"), 
+                new Person(30, "Miguel"),
+                new Person(10, "Miguel"));
+        Collections.sort(lista, comp2);
+        System.out.println(lista);
         //Arrays.sort(str, Comparator.naturalOrder());
+        System.out.println(0 + 'a');
+        System.out.println(0 + 'A');
+        System.out.println(0 + '1');
+    }
+}
+
+class Generic<T>{
+    public void algo(){
+        var lista = new ArrayList<T>();
+    }
+    public static <T> void otro(){
+        var lista = new ArrayList<T>();
     }
 }
 
@@ -47,6 +76,11 @@ class Person{
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "edad=" + edad + ", nombre=" + nombre + '}';
     }
     
 }

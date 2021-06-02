@@ -22,5 +22,16 @@ public class FunctionTest {
         
         BiFunction<String, String, String> bf1 = String::concat;
         System.out.println(bf1.apply("aaa", "bbb"));
+        
+        System.out.println("---------------");
+        Function<String, String> fu1 = x -> "" + x + "fu1-";
+        Function<String, String> fu2 = x -> "" + x + "fu2-";
+        Function<String, String> fu3 = x -> "" + x + "fu3-";
+        
+        String result = fu1.andThen(fu2).andThen(fu3).apply("hh");
+        System.out.println(result);
+        
+        result = fu1.compose(fu2).compose(fu3).apply("zz");
+        System.out.println(result);
     }
 }

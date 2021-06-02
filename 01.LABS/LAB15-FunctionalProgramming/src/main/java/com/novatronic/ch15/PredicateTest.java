@@ -43,6 +43,7 @@ public class PredicateTest {
             return x.contains("verde");
         };
 
+        System.out.println("------- methods");
         boolean result = mp1_empieza
                 .and(mp1_azul)
                 .negate()
