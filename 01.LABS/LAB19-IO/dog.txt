@@ -1,0 +1,3 @@
+5
+Dog{age=2, name=fido}Dog{age=2, name=fido}
+FIN

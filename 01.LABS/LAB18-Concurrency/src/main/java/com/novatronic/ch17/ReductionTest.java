@@ -15,7 +15,7 @@ public class ReductionTest {
 
     public static void main(String[] args) {
         System.out.println(List.of("w", "o", "l", "f")
-                .stream()
+                .parallelStream()
                 .reduce("_",
                         (s1, c) -> s1 + c,
                         (s2, s3) -> s2 + s3));  // wolf
