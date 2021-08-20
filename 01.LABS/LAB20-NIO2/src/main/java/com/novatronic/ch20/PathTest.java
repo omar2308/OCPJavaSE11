@@ -9,6 +9,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  *
@@ -32,7 +33,22 @@ public class PathTest {
         Path path4 = Path.of(a);
         System.out.println("path4: " + path4);
         
-//        FileSystems.getDefault().
+        Path path5 = Paths.get(".", "echo.txt");
+        Path path6 = path5.getParent();
+        System.out.println("path5:" + path5);
+        System.out.println("path6:" + path6);
+        System.out.println("path3.parent:" + path3);
         
+        Path path7 = Paths.get("./none.txt");
+        System.out.println("paht7:" + path7);
+        
+        System.getProperties()
+                .entrySet()
+                .stream()
+                .forEach(x -> System.out.println(x.getKey() + " -> [" + x.getValue() + "]"));
+        
+        //NIO:
+        //.
+        //.. -> ../../../
     }
 }
