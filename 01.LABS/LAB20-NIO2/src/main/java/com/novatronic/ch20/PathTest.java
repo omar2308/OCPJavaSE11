@@ -7,7 +7,6 @@ package com.novatronic.ch20;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -42,10 +41,10 @@ public class PathTest {
         Path path7 = Paths.get("./none.txt");
         System.out.println("paht7:" + path7);
         
-        System.getProperties()
-                .entrySet()
-                .stream()
-                .forEach(x -> System.out.println(x.getKey() + " -> [" + x.getValue() + "]"));
+//        System.getProperties()
+//                .entrySet()
+//                .stream()
+//                .forEach(x -> System.out.println(x.getKey() + " -> [" + x.getValue() + "]"));
         
         //NIO:
         //.
