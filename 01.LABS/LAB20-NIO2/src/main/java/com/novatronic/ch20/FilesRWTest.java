@@ -7,7 +7,9 @@ package com.novatronic.ch20;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.OpenOption;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 /**
@@ -17,7 +19,7 @@ import java.util.List;
 public class FilesRWTest {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("---------- reader");
+        System.out.println("---------- BufferedReader");
         var path = Path.of("echo.txt");
         try (var reader = Files.newBufferedReader(path)) {
             String currentLine = null;
@@ -30,7 +32,8 @@ public class FilesRWTest {
         System.out.println("---------- writer");
         var list = List.of("Hola", "Mundo", "cruel");
         var pathw = Path.of("echow.txt");
-        try (var writer = Files.newBufferedWriter(pathw)){
+        try (var writer = Files.newBufferedWriter(pathw, 
+                StandardOpenOption.APPEND, StandardOpenOption.CREATE)){
             for (String line : list) {
                 writer.write(line);
                 writer.newLine();
