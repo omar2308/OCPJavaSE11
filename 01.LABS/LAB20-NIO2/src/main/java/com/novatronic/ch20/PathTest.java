@@ -36,7 +36,10 @@ public class PathTest {
         Path path6 = path5.getParent();
         System.out.println("path5:" + path5);
         System.out.println("path6:" + path6);
-        System.out.println("path3.parent:" + path3);
+        System.out.println("path3:" + path3);
+        System.out.println("path3.parent:" + path3.getParent());
+        Path path8 = Path.of("./algo.txt");
+        System.out.println("path8.parent:" + path8.getParent());
         
         Path path7 = Paths.get("./none.txt");
         System.out.println("paht7:" + path7);

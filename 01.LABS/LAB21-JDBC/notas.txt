@@ -1,0 +1,54 @@
+1. En docker-compose.yml
+------------------------
+se tiene los datos de la crecion del contenedor de mysql
+user:root
+pass:example (editable en el docker-compose)
+
+
+2. Crear de objetos de BD
+Se recomienda el MySQL Workbench
+- Schema: ocp11
+CREATE DATABASE `ocp11`;
+- usuario:
+user:ocp
+pass:0Cp$_11
+
+Tabla:
+-----
+CREATE TABLE `productos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(50) NULL,
+  `marca` VARCHAR(80) NULL,
+  `modelo` VARCHAR(80) NULL,
+  `nro_parte` VARCHAR(80) NULL,
+  `precio_venta` DECIMAL(19,4) NULL,
+  `notas` TEXT(500) NULL,
+  PRIMARY KEY (`id`))
+COMMENT = 'Tabla de Productos';
+
+Los inserts:
+-----------
+INSERT INTO `ocp11`.`productos` (`id`,`nombre`,`marca`,`modelo`,`nro_parte`,`precio_venta`,`notas`) VALUES
+(NULL,'Lanta','2471-s','Goodyear','LL-001',25.5,'Llanta de remate');
+INSERT INTO `ocp11`.`productos` (`id`,`nombre`,`marca`,`modelo`,`nro_parte`,`precio_venta`,`notas`) VALUES
+(NULL,'Liquido de Frenos','FR-002','XXL','FT-001',12.2,'Frenos por mayor');
+
+Los sp:
+------
+delimiter //
+CREATE PROCEDURE products_count(IN name varchar(20), OUT size INT)
+       BEGIN
+         SELECT COUNT(*) INTO size FROM productos
+         WHERE nombre like concat('%', name , '%');
+       END//
+delimiter ;
+
+delimiter //
+CREATE PROCEDURE products_get(IN name varchar(20))
+       BEGIN
+         SELECT * FROM productos
+         WHERE nombre like concat('%', name , '%');
+       END//
+delimiter ;
+
+

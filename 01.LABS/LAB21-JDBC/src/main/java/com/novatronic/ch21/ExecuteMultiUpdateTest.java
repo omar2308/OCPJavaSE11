@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.novatronic.ch21;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ *
+ * @author Omar
+ */
+public class ExecuteMultiUpdateTest {
+
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ocp11";
+    private static final String JDBC__USER = "ocp";
+    private static final String JDBC_PASS = "0Cp$_11";
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        String updateSql = "UPDATE productos SET nombre = ? WHERE  id = ?";
+        try (Connection conn = DriverManager.getConnection(JDBC_URL, JDBC__USER, JDBC_PASS);
+                PreparedStatement ps = conn.prepareStatement(updateSql)) {
+            
+            //1er update
+            ps.setString(1, "Llanta");
+            ps.setInt(2, 3);
+            int result = ps.executeUpdate();
+            System.out.println("result:" + result);
+            
+            //2do update
+            ps.setString(1, "CCanta");
+            result = ps.executeUpdate();
+            System.out.println("result:" + result);
+            
+        }
+    }
+}
