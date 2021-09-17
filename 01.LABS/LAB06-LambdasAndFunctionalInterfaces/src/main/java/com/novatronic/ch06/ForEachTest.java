@@ -27,7 +27,7 @@ public class ForEachTest {
         
         Map<String, Integer> bunnies2 = new HashMap<>();
         //bunnies2.forEach(action);
-        bunnies2.keySet().forEach(()-> {});
+        bunnies2.keySet().forEach(s-> {});
     }
 
 }

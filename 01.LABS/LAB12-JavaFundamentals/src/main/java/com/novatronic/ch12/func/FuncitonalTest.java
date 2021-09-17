@@ -13,7 +13,7 @@ public interface FuncitonalTest {
     
 }
 @FunctionalInterface
-interface Sprint {
+interface Sprintx {
     public void sprint(int speed);
 }
 

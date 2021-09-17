@@ -1,0 +1,18 @@
+Secure Object:
+-------------
+- Limitar el acceso
+-> Principio: "Least privilege" -> solo exponer lo minimo -> encapsulamiento
+
+- Restingir la extension
+-> Colocando final en las clases
+
+- Crear objetos inmutables
+usare metodos List.of, Set.of, Map.of
+-> estrategias comunes:
+1. clase final
+2. variables de instance private
+3. no setter, y variables de instancia finals
+4. No permitir de referencia de objetos internos mutables
+5. Usar constructores con todas las propiedas (debido al final)
+
+- Clonando Objetos
